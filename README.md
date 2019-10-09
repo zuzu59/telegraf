@@ -46,5 +46,17 @@ Il faut que les secrets soit définis dans les variables d'environnement suivant
 ```
 
 
+### Configuration de Grafana pour utiliser telegraf
+#### Configuration de la data source pour Telegraf
+![Image](https://raw.githubusercontent.com/zuzu59/telegraf/master/img/grafana_configuration_data_source_telegraf.gif)
 
-zf191009.1654
+
+
+#### Configuration du dashboard pour Telegraf
+![Image](https://raw.githubusercontent.com/zuzu59/telegraf/master/img/grafana_configuration_dashboard_telegraf.gif)
+
+
+
+
+
+zf191009.1708
