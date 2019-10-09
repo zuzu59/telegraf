@@ -1,23 +1,23 @@
 #!/bin/bash
 #Petit script pour installer tout le binz
-#zf191009.1555
+#zf191009.1654
 
 # source: https://docs.influxdata.com/telegraf/v1.12/introduction/installation/
 
 echo -e "
 Installation de Telegraf sur cette machine !
 
-ATTENTION, il faut avoir les variables d'environnement suivantes configurées:
+**ATTENTION**
+Il faut que les secrets soit définis dans les variables d'environnement suivantes:
 
-dbflux_u_user
-dbflux_srv_host
-dbflux_db
-dbflux_p_user
-dbflux_srv_port
-dbflux_srv_user
-dbflux_p_admin
-dbflux_u_admin
-
+* dbflux_u_user
+* dbflux_srv_host
+* dbflux_db
+* dbflux_p_user
+* dbflux_srv_port
+* dbflux_srv_user
+* dbflux_p_admin
+* dbflux_u_admin
 "
 
 read -p "Etes-vous certain de vouloir continuer ?"
@@ -36,5 +36,3 @@ sudo cp telegraf.conf /etc/telegraf/telegraf.conf
 ./patch_telegraf_config.sh
 
 ./start.sh
-
-
