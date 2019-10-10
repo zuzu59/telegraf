@@ -1,6 +1,6 @@
 #!/bin/bash
 #Petit script pour installer tout le binz
-#zf191009.1654
+#zf191010.0855
 
 # source: https://docs.influxdata.com/telegraf/v1.12/introduction/installation/
 
@@ -18,7 +18,12 @@ Il faut que les secrets soit définis dans les variables d'environnement suivant
 * dbflux_srv_user
 * dbflux_p_admin
 * dbflux_u_admin
+
+
+Etat actuel des variables d'environnement:
 "
+env |grep dbflux
+echo -e "\n"
 
 read -p "Etes-vous certain de vouloir continuer ?"
 
@@ -32,7 +37,6 @@ sudo apt update && sudo apt install -y telegraf
 curl -i -XPOST "$dbflux_srv_host:$dbflux_srv_port/query?u=$dbflux_u_admin&p=$dbflux_p_admin"  --data-urlencode "q=CREATE DATABASE telegraf"
 curl -i -XPOST "$dbflux_srv_host:$dbflux_srv_port/query?u=$dbflux_u_admin&p=$dbflux_p_admin"  --data-urlencode "q=GRANT ALL ON telegraf TO $dbflux_u_user"
 
-sudo cp telegraf.conf /etc/telegraf/telegraf.conf
 ./patch_telegraf_config.sh
 
-./start.sh
+#./start.sh
