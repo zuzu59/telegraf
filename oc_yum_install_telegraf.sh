@@ -1,6 +1,6 @@
 #!/bin/bash
 #Petit script pour installer Telegraf dans un container Docker sur Openshift mais sous Centos et non Debian
-#zf200513.1652
+#zf200513.1654
 
 #source: https://computingforgeeks.com/install-and-configure-telegraf-on-rhel-centos/
 
@@ -9,6 +9,11 @@ https://repos.influxdata.com/influxdb.key
 EOF
 
 sudo yum -y install telegraf
+
+
+
+exit
+
 
 
 apt update
