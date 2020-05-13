@@ -18,6 +18,9 @@ EOF
 sudo yum -y install telegraf
 
 
+curl -i -XPOST "$dbflux_srv_host:$dbflux_srv_port/query?u=$dbflux_u_admin&p=$dbflux_p_admin" --data-urlencode "q=CREATE DATABASE telegraf"
+curl -i -XPOST "$dbflux_srv_host:$dbflux_srv_port/query?u=$dbflux_u_admin&p=$dbflux_p_admin" --data-urlencode "q=GRANT ALL ON telegraf TO $dbflux_u_user"
+./patch_telegraf_config.sh
 
 exit
 
