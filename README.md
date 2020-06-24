@@ -1,8 +1,11 @@
 # telegraf
 Installe Telegraf sur sa machine pour monitorer son système
 
+zf200624.1602
+
 ## Buts
 Surveiller l'activité physique de sa machine informatique :-)
+
 
 ## Moyens
 Telegraf, permet de le faire facilement
@@ -11,11 +14,11 @@ Telegraf, permet de le faire facilement
 ### Installation
 Il suffit de faire tourner ce script:
 ```
-./install.sh
+./install_linux_ubuntu.sh
 ```
 
 **ATTENTION**<br>
-Il faut que les secrets soit définis dans les variables d'environnement suivantes:
+Pendant la phase d'installation de Telegraf, il faut une fois définir les secrets dans les variables d'environnement suivantes:
 
 * dbflux_u_user
 * dbflux_srv_host
@@ -25,7 +28,6 @@ Il faut que les secrets soit définis dans les variables d'environnement suivant
 * dbflux_srv_user
 * dbflux_p_admin
 * dbflux_u_admin
-
 
 
 ### Démarrage du service telegraf
@@ -55,8 +57,3 @@ Il faut que les secrets soit définis dans les variables d'environnement suivant
 #### Configuration du dashboard pour Telegraf
 ![Image](https://raw.githubusercontent.com/zuzu59/telegraf/master/img/grafana_configuration_dashboard_telegraf.gif)
 
-
-
-
-
-zf191009.1708
