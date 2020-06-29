@@ -1,8 +1,8 @@
 #!/bin/bash
 #Petit script pour copier et 'patcher' la config Telegraf avec les bons sercrets qui se trouvent dans les variable d'environnements
-#zf191010.0855, zf200518.0904
+#zf191010.0855, zf200629.1057
 
-BASH_XTRACEFD="5" && PS4='$LINENO: ' && set -e -v -x
+#BASH_XTRACEFD="5" && PS4='$LINENO: ' && set -e -v -x
 
 zfile="/etc/telegraf/telegraf.conf"
 
