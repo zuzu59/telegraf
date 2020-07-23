@@ -1,10 +1,10 @@
 #!/bin/bash
 #Petit script pour installer tout le binz
-#zf191010.0855, zf200514.2333
+#zf191010.0855, zf200723.1444
 
 # source: https://docs.influxdata.com/telegraf/v1.12/introduction/installation/
 
-BASH_XTRACEFD="5" && PS4='$LINENO: ' && set -e -x -v
+#BASH_XTRACEFD="5" && PS4='$LINENO: ' && set -e -x -v
 
 echo -e "
 Installation de Telegraf sur cette machine !
