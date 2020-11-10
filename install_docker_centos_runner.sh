@@ -1,6 +1,6 @@
 #!/bin/bash
-#Petit script pour installer Telegraf dans un container Docker sous Centos et non Debian
-#zf200629.1057, zf201110.0838
+#Petit script pour installer Telegraf dans un container Docker runner sur Openshift sous Centos
+#zf201110.0844
 
 #source: https://computingforgeeks.com/install-and-configure-telegraf-on-rhel-centos/
 
@@ -22,6 +22,6 @@ sudo yum -y install telegraf
 #curl -i -XPOST "$dbflux_srv_host:$dbflux_srv_port/query?u=$dbflux_u_admin&p=$dbflux_p_admin" --data-urlencode "q=CREATE DATABASE telegraf"
 #curl -i -XPOST "$dbflux_srv_host:$dbflux_srv_port/query?u=$dbflux_u_admin&p=$dbflux_p_admin" --data-urlencode "q=GRANT ALL ON telegraf TO $dbflux_u_user"
 
-$(/usr/bin/dirname $0)/patch_telegraf_config.sh
+$(/usr/bin/dirname $0)/patch_telegraf_config_runner.sh
 
 
